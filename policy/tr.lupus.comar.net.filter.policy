@@ -2,11 +2,11 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <policyconfig>
-    <vendor>Pardus</vendor>
-    <vendor_url>http://www.pardus.org.tr</vendor_url>
+    <vendor>LupuS</vendor>
+    <vendor_url>http://www.teknoanka.com</vendor_url>
     <icon_name>applications-internet</icon_name>
 
-    <action id="tr.org.pardus.comar.net.filter.set">
+    <action id="tr.lupus.comar.net.filter.set">
         <description>Change firewall configuration</description>
         <description xml:lang="tr">Güvenlik duvarı yapılandırmasını değiştir</description>
         <description xml:lang="nl">Verander firewall configuratie</description>
@@ -31,7 +31,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.net.filter.get">
+    <action id="tr.lupus.comar.net.filter.get">
         <description>View firewall configuration</description>
         <description xml:lang="tr">Güvenlik duvarı yapılandırmasına bak</description>
         <description xml:lang="nl">Bekijk firewall configuratie</description>

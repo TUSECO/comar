@@ -58,7 +58,7 @@ Disk.Manager
 
         01 [
         02     "/dev/sda1",
-        03     "LABEL=PARDUS_ROOT",
+        03     "LABEL=LUPUS_ROOT",
         04     "/dev/sda3",
         05 ]
 

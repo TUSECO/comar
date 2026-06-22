@@ -3,7 +3,7 @@ Servis Betikleri
 
 Servis betikleri, Comar'ın sistem servislerinin yönetimi için kullandığı, PİSİ paketleri ile gelen Python uygulamalarıdır. Comar'a System.Service çağrısı (start, stop, info, ...) gönderildiğinde, ilgili paket ile birlikte gelen servis betiği çalıştırılır.
 
-Servis betiği, aşağıdaki gibidir. Sunucunun çalıştırılması, durdurulması ve o anki durumunun öğrenilmesi için gerekli 3 method tanımlanması yeterlidir. Bu üç işlem herhangi bir yöntem ile yapılabilir, ancak servis betiklerinin ortak bir formatta olması ve betiğin yazılmasını kolaylaşması için ÇOMAR-API ile birlikte gelen servis modülü kullanılması tavsiye edilir. ÇOMAR-API, /usr/lib/pardus/comar altında bulunabilir.
+Servis betiği, aşağıdaki gibidir. Sunucunun çalıştırılması, durdurulması ve o anki durumunun öğrenilmesi için gerekli 3 method tanımlanması yeterlidir. Bu üç işlem herhangi bir yöntem ile yapılabilir, ancak servis betiklerinin ortak bir formatta olması ve betiğin yazılmasını kolaylaşması için COMAR-API ile birlikte gelen servis modülü kullanılması tavsiye edilir. ÇOMAR-API, /usr/lib/lupus/comar altında bulunabilir.
 
     serviceType = "server"
     serviceDesc = _({"en": "Server",

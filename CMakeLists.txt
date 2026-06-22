@@ -82,8 +82,8 @@ INSTALL (DIRECTORY
 
 # Install service activation config under /usr/share/dbus-1/system-services/
 INSTALL (FILES
-         config/tr.org.pardus.comar.service
-         config/tr.org.pardus.comar2.service
+         config/tr.lupus.comar.service
+         config/tr.lupus.comar2.service
          DESTINATION /usr/share/dbus-1/system-services/)
 
 # Install polkit policies
@@ -95,7 +95,7 @@ INSTALL (DIRECTORY
 
 # Install system bus policy under /etc/dbus-1/system.d/
 INSTALL (FILES
-         config/tr.org.pardus.comar.conf
+         config/tr.lupus.comar.conf
          DESTINATION /etc/dbus-1/system.d)
 
 # Install hav to /usr/bin/hav

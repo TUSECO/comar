@@ -2,11 +2,11 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <policyconfig>
-    <vendor>Pardus</vendor>
-    <vendor_url>http://www.pardus.org.tr</vendor_url>
+    <vendor>LupuS</vendor>
+    <vendor_url>http://www.teknoanka.com</vendor_url>
     <icon_name>video-display</icon_name>
 
-    <action id="tr.org.pardus.comar.xorg.display.get">
+    <action id="tr.lupus.comar.xorg.display.get">
         <description>Get display info</description>
         <description xml:lang="tr">Görüntü bilgisini al</description>
         <description xml:lang="fr">Obtenir les informations concernant l'affichage</description>
@@ -29,7 +29,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.xorg.display.set">
+    <action id="tr.lupus.comar.xorg.display.set">
         <description>Change display configuration</description>
         <description xml:lang="tr">Görüntü yapılandırmasını değiştir</description>
         <description xml:lang="fr">Modifier la configuration de l'affichage</description>

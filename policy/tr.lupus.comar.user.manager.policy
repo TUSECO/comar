@@ -2,11 +2,11 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <policyconfig>
-    <vendor>Pardus</vendor>
-    <vendor_url>http://www.pardus.org.tr</vendor_url>
+    <vendor>LupuS</vendor>
+    <vendor_url>http://www.teknoanka.com</vendor_url>
     <icon_name>system-users</icon_name>
 
-    <action id="tr.org.pardus.comar.user.manager.adduser">
+    <action id="tr.lupus.comar.user.manager.adduser">
         <description>Add user</description>
         <description xml:lang="tr">Kullanıcı ekle</description>
         <description xml:lang="fr">Ajouter un utilisateur</description>
@@ -29,7 +29,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.user.manager.setuser">
+    <action id="tr.lupus.comar.user.manager.setuser">
         <description>Change user details</description>
         <description xml:lang="tr">Kullanıcı bilgilerini değiştir</description>
         <description xml:lang="fr">Modifier les détails concernant un utilisateur</description>
@@ -52,7 +52,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.user.manager.deleteuser">
+    <action id="tr.lupus.comar.user.manager.deleteuser">
         <description>Delete user</description>
         <description xml:lang="tr">Kullanıcı sil</description>
         <description xml:lang="fr">Supprimer un utilisateur</description>
@@ -75,7 +75,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.user.manager.addgroup">
+    <action id="tr.lupus.comar.user.manager.addgroup">
         <description>Add group</description>
         <description xml:lang="tr">Grup ekle</description>
         <description xml:lang="fr">Ajouter un groupe</description>
@@ -98,7 +98,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.user.manager.deletegroup">
+    <action id="tr.lupus.comar.user.manager.deletegroup">
         <description>Delete group</description>
         <description xml:lang="tr">Grup sil</description>
         <description xml:lang="fr">Supprimer un groupe</description>
@@ -121,7 +121,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.user.manager.get">
+    <action id="tr.lupus.comar.user.manager.get">
         <description>Get user/groups</description>
         <description xml:lang="tr">Kullanıcı/grupları al</description>
         <description xml:lang="fr">Obtenir un groupe/un utilisateur</description>
@@ -144,7 +144,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.user.manager.listuserauthorizations">
+    <action id="tr.lupus.comar.user.manager.listuserauthorizations">
         <description>List user authorizations</description>
         <description xml:lang="tr">Kullanıcı yetkilerini listele</description>
         <description xml:lang="fr">Lister les permissions d'un utilisateur</description>

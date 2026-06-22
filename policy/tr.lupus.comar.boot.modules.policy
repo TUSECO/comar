@@ -2,11 +2,11 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <policyconfig>
-    <vendor>Pardus</vendor>
-    <vendor_url>http://www.pardus.org.tr</vendor_url>
+    <vendor>LupuS</vendor>
+    <vendor_url>http://www.teknoanka.com</vendor_url>
     <icon_name>computer</icon_name>
 
-    <action id="tr.org.pardus.comar.boot.modules.setoptions">
+    <action id="tr.lupus.comar.boot.modules.setoptions">
         <description>Set module options</description>
         <description xml:lang="tr">Modül seçeneklerini değiştir</description>
         <description xml:lang="fr">Établir les options du module</description>
@@ -31,7 +31,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.boot.modules.load">
+    <action id="tr.lupus.comar.boot.modules.load">
         <description>Load kernel module</description>
         <description xml:lang="tr">Çekirdek modülünü etkinleştir</description>
         <description xml:lang="fr">Charger le module</description>
@@ -56,7 +56,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.boot.modules.unload">
+    <action id="tr.lupus.comar.boot.modules.unload">
         <description>Unload kernel module</description>
         <description xml:lang="tr">Çekirdek modülünü etkisiz kıl</description>
         <description xml:lang="fr">Décharger le module</description>
@@ -81,7 +81,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.boot.modules.addautoload">
+    <action id="tr.lupus.comar.boot.modules.addautoload">
         <description>Add autoloading kernel module</description>
         <description xml:lang="tr">Otomatik yüklenen çekirdek modülü ekle</description>
         <description xml:lang="fr">Activer le chargement automatique du module</description>
@@ -106,7 +106,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.boot.modules.updatemodules">
+    <action id="tr.lupus.comar.boot.modules.updatemodules">
         <description>Update module configuration</description>
         <description xml:lang="tr">Modül yapılandırmasını güncelle</description>
         <description xml:lang="fr">Mettre à jour la configuration du module</description>
@@ -131,7 +131,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.boot.modules.get">
+    <action id="tr.lupus.comar.boot.modules.get">
         <description>Get module information</description>
         <description xml:lang="tr">Modül bilgisini al</description>
         <description xml:lang="fr">Obtenir les informations concernant le module</description>
@@ -156,7 +156,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.boot.modules.editautoload">
+    <action id="tr.lupus.comar.boot.modules.editautoload">
         <description>Edit autoload list</description>
         <description xml:lang="tr">Otomatik yükleme listesini değiştir</description>
         <description xml:lang="fr">Éditer la liste de chargement automatique</description>
@@ -181,7 +181,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.boot.modules.editblacklist">
+    <action id="tr.lupus.comar.boot.modules.editblacklist">
         <description>Edit module blacklist</description>
         <description xml:lang="tr">Modül karalistesini değiştir</description>
         <description xml:lang="fr">Éditer la liste noire des modules</description>

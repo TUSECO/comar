@@ -40,7 +40,7 @@ Network.Stack
 
         Yazılacak fonksiyon, aşağıdaki gibi bir çıktı vermelidir:
 
-        01 "pardus-2009"
+        01 "lupus-2027"
 
 
     setHostName(hostname):

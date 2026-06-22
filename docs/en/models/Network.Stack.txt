@@ -39,7 +39,7 @@ Network.Stack
 
         Function should return something like that:
 
-        01 "pardus-2009"
+        01 "lupus-2027"
 
 
     setHostName(hostname):

@@ -2,11 +2,11 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <policyconfig>
-    <vendor>Pardus</vendor>
-    <vendor_url>http://www.pardus.org.tr</vendor_url>
+    <vendor>LupuS</vendor>
+    <vendor_url>http://www.teknoanka.com</vendor_url>
     <icon_name>video-display</icon_name>
 
-    <action id="tr.org.pardus.comar.xorg.driver.get">
+    <action id="tr.lupus.comar.xorg.driver.get">
         <description>Get driver info</description>
         <description xml:lang="tr">Sürücü bilgisini al</description>
         <description xml:lang="sv">Läser drivrutinsinformation</description>

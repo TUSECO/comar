@@ -1,7 +1,7 @@
 Giriş
 =====
 
-Bu belge, Pardus'un yapılandırma yönetim sistemi olan ÇOMAR'ın, ne amaçla geliştirildiğini, hangi sorunlara çözüm getirdiğini, yapısını ve bileşenlerini anlatır. Hedef kitlesi, ÇOMAR'ı yakından tanımak isteyen kullanıcılar ve sistem yöneticileridir. Bilişim okuryazarı seviyesine göre yazılmış olmakla birlikte, bazı tartışmaları takip edebilmek için, bir işletim sisteminin bileşenleri ve uygulamaların nasıl ayarlandığı gibi sistem yönetimi konularında bilgi sahibi olmak gerekebilir.
+Bu belge, LupuS'un yapılandırma yönetim sistemi olan ÇOMAR'ın, ne amaçla geliştirildiğini, hangi sorunlara çözüm getirdiğini, yapısını ve bileşenlerini anlatır. Hedef kitlesi, ÇOMAR'ı yakından tanımak isteyen kullanıcılar ve sistem yöneticileridir. Bilişim okuryazarı seviyesine göre yazılmış olmakla birlikte, bazı tartışmaları takip edebilmek için, bir işletim sisteminin bileşenleri ve uygulamaların nasıl ayarlandığı gibi sistem yönetimi konularında bilgi sahibi olmak gerekebilir.
 
 
 Sorun
@@ -174,7 +174,7 @@ Genel bir programlama dilinde bulunan çoğu modül ve kitaplık (özellikle gra
 
 Bu iş için en uygun dil olarak gördüğümüz Python'u temel aldık. Python işleticisini (VM), bizim belirlediğimiz bazı modülleri (string, re, config modülleri, vb...) alıp, bunun üstüne ihtiyacımız olan diğer fonksiyonları bir modül olarak ekleyerek CSL (Çomar Scripting Language) adını verdiğimiz bir alt dil oluşturduk. Nedenlerimiz:
 
-* PİSİ paketlerinin hazırlama ve derleme betiklerinde de Python kullanıldığı için paket yapıcı tek bir dil öğrenip kullanarak tam bir Pardus pakedi hazırlayabilecektir.
+* PİSİ paketlerinin hazırlama ve derleme betiklerinde de Python kullanıldığı için paket yapıcı tek bir dil öğrenip kullanarak tam bir LupuS pakedi hazırlayabilecektir.
 * Python VM, hız ve kaynak kullanımı olarak çok uygundur. Bir işletici program içinden rahatça ayarlanıp kullanılabilen bir kitaplık halindedir.
 * Program yazarken sıkça karşılaşılan yapıların (design patterns) çoğu Python'da temel özellik olarak bulunduğu için kod temiz ve anlaşılır olmakta; implementasyon, mantığı gölgelememektedir.
 * Minimal ve temiz sentaksı dolayısıyla kodların boyutu kısa, okunabilirliği yüksek olmaktadır. 

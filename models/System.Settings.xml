@@ -6,7 +6,7 @@
         <method name="getLanguage" action_id="">
             <arg name="language" type="s" direction="out"/>
         </method>
-        <method name="setLanguage" action_id="tr.org.pardus.comar.system.settings.set">
+        <method name="setLanguage" action_id="tr.lupus.comar.system.settings.set">
             <arg name="language" type="s" direction="in"/>
         </method>
 
@@ -17,7 +17,7 @@
         <method name="getKeymap" action_id="">
             <arg name="keymap" type="s" direction="out"/>
         </method>
-        <method name="setKeymap" action_id="tr.org.pardus.comar.system.settings.set">
+        <method name="setKeymap" action_id="tr.lupus.comar.system.settings.set">
             <arg name="keymap" type="s" direction="in"/>
         </method>
 
@@ -28,14 +28,14 @@
         <method name="getLocale" action_id="">
             <arg name="locale" type="s" direction="out"/>
         </method>
-        <method name="setLocale" action_id="tr.org.pardus.comar.system.settings.set">
+        <method name="setLocale" action_id="tr.lupus.comar.system.settings.set">
             <arg name="locale" type="s" direction="in"/>
         </method>
 
         <method name="getHeadStart" action_id="">
             <arg name="package" type="s" direction="out"/>
         </method>
-        <method name="setHeadStart" action_id="tr.org.pardus.comar.system.settings.set">
+        <method name="setHeadStart" action_id="tr.lupus.comar.system.settings.set">
             <arg name="package" type="s" direction="in"/>
         </method>
 
@@ -43,7 +43,7 @@
             <arg name="is_utc" type="b" direction="out"/>
             <arg name="adjust" type="b" direction="out"/>
         </method>
-        <method name="setClock" action_id="tr.org.pardus.comar.system.settings.set">
+        <method name="setClock" action_id="tr.lupus.comar.system.settings.set">
             <arg name="is_utc" type="b" direction="in"/>
             <arg name="adjust" type="b" direction="in"/>
         </method>
@@ -51,7 +51,7 @@
         <method name="getTTYs" action_id="">
             <arg name="count" type="i" direction="out"/>
         </method>
-        <method name="setTTYs" action_id="tr.org.pardus.comar.system.settings.set">
+        <method name="setTTYs" action_id="tr.lupus.comar.system.settings.set">
             <arg name="count" type="i" direction="in"/>
         </method>
 

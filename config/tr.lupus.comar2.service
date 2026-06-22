@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=tr.lupus.comar2
+Exec=/usr/sbin/comar -i -b tr.lupus.comar2
+User=root

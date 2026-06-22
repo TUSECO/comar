@@ -2,11 +2,11 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <policyconfig>
-    <vendor>Pardus</vendor>
-    <vendor_url>http://www.pardus.org.tr</vendor_url>
+    <vendor>LupuS</vendor>
+    <vendor_url>http://www.teknoanka.com</vendor_url>
     <icon_name>computer</icon_name>
 
-    <action id="tr.org.pardus.comar.boot.loader.updatekernelentry">
+    <action id="tr.lupusr.boot.loader.updatekernelentry">
         <description>Update kernel release on specified partition</description>
         <description xml:lang="tr">Belirli disk bölümündeki çekirdek sürümünü güncelle</description>
         <description xml:lang="fr">Mise à jour de la version du noyau dans la partition indiquée</description>
@@ -31,7 +31,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.boot.loader.removeentry">
+    <action id="tr.lupus.comar.boot.loader.removeentry">
         <description>Remove entry from boot loader</description>
         <description xml:lang="tr">Önyükleyiciden girdi sil</description>
         <description xml:lang="fr">Supprimer cette entrée du chargeur de démarrage</description>
@@ -56,7 +56,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.boot.loader.removeunused">
+    <action id="tr.lupus.comar.boot.loader.removeunused">
         <description>Remove unused kernel from system</description>
         <description xml:lang="tr">Sistemden kullanılmayan çekirdeği sil</description>
         <description xml:lang="fr">Supprimer du système les noyaux inutilisés.</description>
@@ -81,7 +81,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.boot.loader.set">
+    <action id="tr.lupus.comar.boot.loader.set">
         <description>Edit boot loader options and add new entries</description>
         <description xml:lang="tr">Önyükleyici seçeneklerini değiştir ve yeni girdiler ekle</description>
         <description xml:lang="fr">Éditer les options du chargeur de démarrage et ajouter de nouvelles entrées</description>
@@ -106,7 +106,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.boot.loader.get">
+    <action id="tr.lupus.comar.boot.loader.get">
         <description>View boot loader options and list entries</description>
         <description xml:lang="tr">Önyükleyici seçeneklerine bak ve girdileri listele</description>
         <description xml:lang="fr">Voir les options du chargeur de démarrage et lister les entrées</description>

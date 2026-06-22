@@ -2,11 +2,11 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <policyconfig>
-    <vendor>Pardus</vendor>
-    <vendor_url>http://www.pardus.org.tr</vendor_url>
+    <vendor>LupuS</vendor>
+    <vendor_url>http://www.teknoanka.com</vendor_url>
     <icon_name>preferences-system-session</icon_name>
 
-    <action id="tr.org.pardus.comar.system.service.set">
+    <action id="tr.lupus.comar.system.service.set">
         <description>Change service state</description>
         <description xml:lang="tr">Servis durumunu değiştir</description>
         <description xml:lang="nl">Verander dienst status</description>
@@ -29,7 +29,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.system.service.get">
+    <action id="tr.lupus.comar.system.service.get">
         <description>Get service status</description>
         <description xml:lang="tr">Servis durumunu oku</description>
         <description xml:lang="nl">Verkrijg dienst status</description>

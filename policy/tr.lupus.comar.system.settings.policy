@@ -2,11 +2,11 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <policyconfig>
-    <vendor>Pardus</vendor>
-    <vendor_url>http://www.pardus.org.tr</vendor_url>
+    <vendor>LupuS</vendor>
+    <vendor_url>http://www.teknoanka.com</vendor_url>
     <icon_name>preferences-system</icon_name>
 
-    <action id="tr.org.pardus.comar.system.settings.set">
+    <action id="tr.lupus.comar.system.settings.set">
         <description>Change system settings</description>
         <description xml:lang="tr">Sistem ayarlarını değiştir</description>
         <description xml:lang="sv">Ändra systeminställningar</description>

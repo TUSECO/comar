@@ -2,11 +2,11 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <policyconfig>
-    <vendor>Pardus</vendor>
-    <vendor_url>http://www.pardus.org.tr</vendor_url>
+    <vendor>LupuS</vendor>
+    <vendor_url>http://www.teknoanka.com</vendor_url>
     <icon_name>package</icon_name>
 
-    <action id="tr.org.pardus.comar.system.package.postinstall">
+    <action id="tr.lupus.comar.system.package.postinstall">
         <description>Execute post-install script of a package</description>
         <description xml:lang="tr">Bir paketin yükleme sonrası betiğini çalıştır</description>
         <description xml:lang="nl">Voer post-installatie script van pakket uit</description>
@@ -29,7 +29,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.system.package.preremove">
+    <action id="tr.lupus.comar.system.package.preremove">
         <description>Execute pre-remove script of a package</description>
         <description xml:lang="tr">Bir paketin kaldırma öncesi betiğini çalıştır</description>
         <description xml:lang="nl">Voer pre-verwijder script van een pakket uit</description> 
@@ -51,7 +51,7 @@
             <allow_active>no</allow_active>
         </defaults>
     </action>
-    <action id="tr.org.pardus.comar.system.package.postremove">
+    <action id="tr.lupus.comar.system.package.postremove">
         <description>Execute post-remove script of a package</description>
         <description xml:lang="tr">Bir paketin kaldırma sonrası betiğini çalıştır</description>
         <description xml:lang="fr">Exécuter les scripts de préparation à la suppression d'un paquet</description>

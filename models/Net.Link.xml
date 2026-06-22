@@ -10,20 +10,20 @@
             <arg name="device" type="s" direction="in"/>
             <arg name="remotes" type="aa{ss}" direction="out"/>
         </method>
-        <method name="setConnection" action_id="tr.org.pardus.comar.net.link.set">
+        <method name="setConnection" action_id="tr.lupus.comar.net.link.set">
             <arg name="name" type="s" direction="in"/>
             <arg name="device" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
-        <method name="setConnectionMode" action_id="tr.org.pardus.comar.net.link.set">
+        <method name="setConnectionMode" action_id="tr.lupus.comar.net.link.set">
             <arg name="name" type="s" direction="in"/>
             <arg name="device_mode" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
-        <method name="deleteConnection" action_id="tr.org.pardus.comar.net.link.set">
+        <method name="deleteConnection" action_id="tr.lupus.comar.net.link.set">
             <arg name="name" type="s" direction="in"/>
         </method>
-        <method name="setAddress" action_id="tr.org.pardus.comar.net.link.set">
+        <method name="setAddress" action_id="tr.lupus.comar.net.link.set">
             <arg name="name" type="s" direction="in"/>
             <arg name="mode" type="s" direction="in"/>
             <arg name="address" type="s" direction="in"/>
@@ -31,7 +31,7 @@
             <arg name="gateway" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
-        <method name="setVpn" action_id="tr.org.pardus.comar.net.link.set">
+        <method name="setVpn" action_id="tr.lupus.comar.net.link.set">
             <arg name="name" type="s" direction="in"/>
             <arg name="domain" type="s" direction="in"/>
             <arg name="port" type="s" direction="in"/>
@@ -42,19 +42,19 @@
             <arg name="chipher" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
-        <method name="setRemote" action_id="tr.org.pardus.comar.net.link.set">
+        <method name="setRemote" action_id="tr.lupus.comar.net.link.set">
             <arg name="name" type="s" direction="in"/>
             <arg name="remote" type="s" direction="in"/>
             <arg name="apmac" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
-        <method name="setNameService" action_id="tr.org.pardus.comar.net.link.set">
+        <method name="setNameService" action_id="tr.lupus.comar.net.link.set">
             <arg name="name" type="s" direction="in"/>
             <arg name="namemode" type="s" direction="in"/>
             <arg name="nameserver" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
-        <method name="setAuthentication" action_id="tr.org.pardus.comar.net.link.set">
+        <method name="setAuthentication" action_id="tr.lupus.comar.net.link.set">
             <arg name="name" type="s" direction="in"/>
             <arg name="authmode" type="s" direction="in"/>
             <arg name="user" type="s" direction="in"/>
@@ -68,11 +68,11 @@
             <arg name="private_key_passwd" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
-        <method name="setChannel" action_id="tr.org.pardus.comar.net.link.set">
+        <method name="setChannel" action_id="tr.lupus.comar.net.link.set">
             <arg name="name" type="s" direction="in"/>
             <arg name="chan" type="s" direction="in"/>
         </method>
-        <method name="setState" action_id="tr.org.pardus.comar.net.link.setstate">
+        <method name="setState" action_id="tr.lupus.comar.net.link.setstate">
             <arg name="name" type="s" direction="in"/>
             <arg name="state" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
@@ -102,7 +102,7 @@
             <arg name="auth_private_key" type="s" direction="out"/>
             <arg name="auth_private_key_pass" type="s" direction="out"/>
         </method>
-        <method name="kernelEvent" action_id="tr.org.pardus.comar.net.link.set">
+        <method name="kernelEvent" action_id="tr.lupus.comar.net.link.set">
             <arg name="data" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
@@ -123,7 +123,7 @@
         </signal>
     </interface>
     <interface name="Net.Share">
-        <method name="checkShare" action_id="tr.org.pardus.comar.net.link.set">
+        <method name="checkShare" action_id="tr.lupus.comar.net.link.set">
             <arg name="net_addr" type="s" direction="in"/>
             <arg name="net_mode" type="s" direction="in"/>
             <arg name="net_mask" type="s" direction="in"/>
@@ -134,12 +134,12 @@
         <method name="getNameServers" action_id="">
             <arg name="servers" type="as" direction="out"/>
         </method>
-        <method name="setNameServers" action_id="tr.org.pardus.comar.net.stack.set">
+        <method name="setNameServers" action_id="tr.lupus.comar.net.stack.set">
             <arg name="nameservers" type="as" direction="in"/>
             <arg name="searchdomain" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
-        <method name="useNameServers" action_id="tr.org.pardus.comar.net.stack.set">
+        <method name="useNameServers" action_id="tr.lupus.comar.net.stack.set">
             <arg name="servers" type="as" direction="in"/>
             <arg name="domain" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
@@ -147,20 +147,20 @@
         <method name="getHostName" action_id="">
             <arg name="hostname" type="s" direction="out"/>
         </method>
-        <method name="setHostName" action_id="tr.org.pardus.comar.net.stack.set">
+        <method name="setHostName" action_id="tr.lupus.comar.net.stack.set">
             <arg name="hostname" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
     </interface>
     <interface name="Net.Filter">
-        <method name="setRule" action_id="tr.org.pardus.comar.net.filter.set">
+        <method name="setRule" action_id="tr.lupus.comar.net.filter.set">
             <arg name="rule" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
         <method name="getRules" action_id="">
             <arg name="rules" type="as" direction="out"/>
         </method>
-        <method name="setProfile" action_id="tr.org.pardus.comar.net.filter.set">
+        <method name="setProfile" action_id="tr.lupus.comar.net.filter.set">
             <arg name="profile" type="s" direction="in"/>
             <arg name="save_filter" type="s" direction="in"/>
             <arg name="save_mangle" type="s" direction="in"/>

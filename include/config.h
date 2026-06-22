@@ -36,11 +36,11 @@
 #endif
 
 #ifndef DBUS_SERVICE_NAME
-#define DBUS_SERVICE_NAME "tr.org.pardus.comar"
+#define DBUS_SERVICE_NAME "tr.lupus.comar"
 #endif
 
 #ifndef DBUS_INTERFACE_PREFIX
-#define DBUS_INTERFACE_PREFIX "tr.org.pardus.comar"
+#define DBUS_INTERFACE_PREFIX "tr.lupus.comar"
 #endif
 
 #ifndef IDLE_TIMEOUT
@@ -60,7 +60,7 @@
 #endif
 
 #ifndef WWW_BUGS
-#define WWW_BUGS "http://bugs.pardus.org.tr"
+#define WWW_BUGS "http://bugs.teknoanka.com"
 #endif
 
 extern char *config_server_address;

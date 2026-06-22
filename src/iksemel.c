@@ -38,6 +38,7 @@
 #include <stdio.h>
 #include <errno.h>
 #include "iksemel.h"
+#include <fcntl.h>
 
 /*****  malloc wrapper  *****/
 

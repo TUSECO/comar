@@ -17,11 +17,11 @@
             <arg name="module" type="s" direction="in"/>
             <arg name="state" type="s" direction="out"/>
         </method>
-        <method name="setModuleState" action_id="tr.org.pardus.comar.net.filter.set">
+        <method name="setModuleState" action_id="tr.lupus.comar.net.filter.set">
             <arg name="module" type="s" direction="in"/>
             <arg name="state" type="s" direction="in"/>
         </method>
-        <method name="setModuleParameters" action_id="tr.org.pardus.comar.net.filter.set">
+        <method name="setModuleParameters" action_id="tr.lupus.comar.net.filter.set">
             <arg name="module" type="s" direction="in"/>
             <arg name="parameters" type="a{ss}" direction="in"/>
         </method>
@@ -32,7 +32,7 @@
         <method name="getState" action_id="">
             <arg name="state" type="s" direction="out"/>
         </method>
-        <method name="setState" action_id="tr.org.pardus.comar.net.filter.set">
+        <method name="setState" action_id="tr.lupus.comar.net.filter.set">
             <arg name="state" type="s" direction="in"/>
         </method>
         <signal name="stateChanged">

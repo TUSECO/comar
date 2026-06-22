@@ -4,7 +4,7 @@ Misal, ağ bağlantısı kurmak istiyorsunuz. Bunu farklı yollarla, farklı yö
 
 Çoğu Linux dağımı bu işi böyle yapar. Belirli bir görevi yerine getirmek için oluşturulmuş -çoğu dağıtıma özgü- yönetim arabirimleri, kendi yöntemleri ile ayarları değiştirir, komut çalıştırır ve sonuçta kullanıcının isteğini yerine getirir. Sorun ise, aynı ayar dosyaları ya da uygulamalar farklı yönetim araçları ve bu araçlardan bilgi almak isteyen diğer uygulamalar tarafından kullanılmak istendiğinde ve kullanıcılara bir işi yapabilmeleri için yetkili kullanıcı (root) hesabı parolası verilmesi gerektiğinde ortaya çıkar.
 
-ÇOMAR, burada devreye girer, sade ve basit bir çözüm ile. Pardus'ta sık yapılan işler için görev modelleri tanımlanır ve bu görevleri üstlenecek uygulamaların birbirlerinin ayağına basmadan, altyapıdaki değişikliklerden (değişen sürümler, kullanılan yeni teknolojiler, ...) çalışmalarını sağlayacak ve gerektiğinde yetki kontrolü yapabilen bir yönetim katmanı oluşturulur.
+ÇOMAR, burada devreye girer, sade ve basit bir çözüm ile. LupuS'ta sık yapılan işler için görev modelleri tanımlanır ve bu görevleri üstlenecek uygulamaların birbirlerinin ayağına basmadan, altyapıdaki değişikliklerden (değişen sürümler, kullanılan yeni teknolojiler, ...) çalışmalarını sağlayacak ve gerektiğinde yetki kontrolü yapabilen bir yönetim katmanı oluşturulur.
 
 * Ağ bağlantısı yönetimi
   * Aygıtları listele
@@ -20,7 +20,7 @@ Misal, ağ bağlantısı kurmak istiyorsunuz. Bunu farklı yollarla, farklı yö
   * ...
 * ...
 
-Görev modelleri yukarıda görüldüğü gibi olabildiğince sadedir, uygulamalardan ve teknolojilerden bağımsızdır. Alt görevleri yerine getirecek kodlar ise görevi yerine getirecek uygulamanın PiSi paketi ile beraber gelen Python betikleridir (bunlara ÇOMAR betikleri diyoruz) ve bu betikler içinde modelde tanımlı her alt görevi yerine getiren bir fonksiyon bulunmaktadır. Her uygulama, aynı görevi farklı şekillerde yerine getirdiğinden, her uygulamanın ÇOMAR betiği farklıdır. Betikler, uygulamaların PiSi paketlerini hazırlayan -teorik olarak, Pardus geliştiricileri arasında, o uygulamayı en iyi bilen- geliştiriciler tarafından yazıldığından, arabirimlerin keyfi yöntemlerle ayar dosyası değiştirme ya da komut çalıştırmasından daha güvenli ve düzenlidirler. Detaylı bilgi için, mevcut görev modelleri ve bu görevleri yerine getirecek ÇOMAR betiklerinin formatları [0] incelenebilir.
+Görev modelleri yukarıda görüldüğü gibi olabildiğince sadedir, uygulamalardan ve teknolojilerden bağımsızdır. Alt görevleri yerine getirecek kodlar ise görevi yerine getirecek uygulamanın PiSi paketi ile beraber gelen Python betikleridir (bunlara ÇOMAR betikleri diyoruz) ve bu betikler içinde modelde tanımlı her alt görevi yerine getiren bir fonksiyon bulunmaktadır. Her uygulama, aynı görevi farklı şekillerde yerine getirdiğinden, her uygulamanın ÇOMAR betiği farklıdır. Betikler, uygulamaların PiSi paketlerini hazırlayan -teorik olarak, LupuS geliştiricileri arasında, o uygulamayı en iyi bilen- geliştiriciler tarafından yazıldığından, arabirimlerin keyfi yöntemlerle ayar dosyası değiştirme ya da komut çalıştırmasından daha güvenli ve düzenlidirler. Detaylı bilgi için, mevcut görev modelleri ve bu görevleri yerine getirecek ÇOMAR betiklerinin formatları [0] incelenebilir.
 
 Arabirimler ve ÇOMAR betikleri arasında duran ve yetki kontrolü yapan katmanda ise, yapılan iş teknik olarak karışık görünse de, aslında son derece basittir. Arabirimden alınan bir çağrı, örneğin ağ bağlantısı kurma emri; çağrıyı yapan kullanıcının o işi yapmaya yetkisi olup olmadığı kontrol edildikten sonra, ilgili uygulamanın ÇOMAR betiğine yönlendirilir ve betikte tanımlı fonksiyon çalıştırılır. Sıkıcı detaylar için, iletişim için kullanılan DBus'a belgeleri [2] ve ara katman ile ilgili tasarım notları incelenebilir.
 
@@ -30,12 +30,3 @@ Arabirimlerin, bu ara katman ile iletişimi kolay bir şekilde yapabilmeleri iç
     link = comar.Link()
     print "Servis betiği olan uygulamalar:"
     print list(link.System.Service)
-
-Bu Python kütüphanesi ile ilgili daha fazla örnek, COMAR API [3] projesine ait Beni Oku [4] dosyasında ve örnekler dizininde [5] bulunabilir.
-
-[0] http://svn.pardus.org.tr/uludag/trunk/comar/comar/docs/tr/models/
-[1] http://www.freedesktop.org/wiki/IntroductionToDBus
-[2] http://svn.pardus.org.tr/uludag/trunk/comar/comar/docs/tr/
-[3] http://svn.pardus.org.tr/uludag/trunk/comar/api/
-[4] http://svn.pardus.org.tr/uludag/trunk/comar/api/README
-[5] http://svn.pardus.org.tr/uludag/trunk/comar/api/examples/

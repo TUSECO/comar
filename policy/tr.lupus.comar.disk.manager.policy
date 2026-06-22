@@ -2,11 +2,11 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <policyconfig>
-    <vendor>Pardus</vendor>
-    <vendor_url>http://www.pardus.org.tr</vendor_url>
+    <vendor>LupuS</vendor>
+    <vendor_url>http://www.teknoanka.com</vendor_url>
     <icon_name>drive-harddisk</icon_name>
 
-    <action id="tr.org.pardus.comar.disk.manager.set">
+    <action id="tr.lupus.comar.disk.manager.set">
         <description>Change disk manager settings</description>
         <description xml:lang="tr">Disk yöneticisi ayarlarını değiştir</description>
         <description xml:lang="nl">Verander schijfbeheer instellingen</description>
@@ -31,7 +31,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.disk.manager.get">
+    <action id="tr.lupus.comar.disk.manager.get">
         <description>View disk manager settings</description>
         <description xml:lang="tr">Disk yöneticisi ayarlarını görüntüle</description>
         <description xml:lang="nl">Bekijk schijfbeheer instellingen</description>
@@ -56,7 +56,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.disk.manager.mount">
+    <action id="tr.lupus.comar.disk.manager.mount">
         <description>Add and remove block devices</description>
         <description xml:lang="tr">Disk ekle ve çıkar</description>
         <description xml:lang="nl">Toevoegen en verwijderen van apparatuur</description>

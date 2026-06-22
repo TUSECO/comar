@@ -12,14 +12,14 @@ setRule() passes arguments to IPTables directly, so all interfaces
 that uses Net.Filter model also should be IPTables dependent and 
 have the ability to parse/generate IPTables rules.
 
-        <method name="setRule" action_id="tr.org.pardus.comar.net.filter.set">
+        <method name="setRule" action_id="tr.lupus.comar.net.filter.set">
             <arg name="rule" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
         <method name="getRules" action_id="">
             <arg name="rules" type="as" direction="out"/>
         </method>
-        <method name="setProfile" action_id="tr.org.pardus.comar.net.filter.set">
+        <method name="setProfile" action_id="tr.lupus.comar.net.filter.set">
             <arg name="profile" type="s" direction="in"/>
             <arg name="save_filter" type="s" direction="in"/>
             <arg name="save_mangle" type="s" direction="in"/>

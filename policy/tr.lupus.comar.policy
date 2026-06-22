@@ -2,11 +2,11 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <policyconfig>
-    <vendor>Pardus</vendor>
-    <vendor_url>http://www.pardus.org.tr</vendor_url>
+    <vendor>LupuS</vendor>
+    <vendor_url>http://www.teknoanka.com</vendor_url>
     <icon_name>applications-system</icon_name>
 
-    <action id="tr.org.pardus.comar.register">
+    <action id="tr.lupus.comar.register">
         <description>Register new scripts</description>
         <description xml:lang="tr">Yeni betikleri sisteme kaydet</description>
         <description xml:lang="nl">Registreer nieuwe scripts</description>
@@ -32,7 +32,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.remove">
+    <action id="tr.lupus.comar.remove">
         <description>Remove application</description>
         <description xml:lang="tr">Uygulama kaldır</description>
         <description xml:lang="nl">Verwijder programma's</description>
@@ -58,7 +58,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.listapplications">
+    <action id="tr.lupus.comar.listapplications">
         <description>List applications</description>
         <description xml:lang="tr">Uygulamaları listele</description>
         <description xml:lang="fr">Lister les applications</description>
@@ -84,7 +84,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.listmodels">
+    <action id="tr.lupus.comar.listmodels">
         <description>List models</description>
         <description xml:lang="tr">Modelleri listele</description>
         <description xml:lang="nl">Lijst van modellen</description>
@@ -110,7 +110,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.listapplicationmodels">
+    <action id="tr.lupus.comar.listapplicationmodels">
         <description>List application models</description>
         <description xml:lang="tr">Uygulama modellerini listele</description>
         <description xml:lang="nl">Lijst van programma modellen</description> 
@@ -136,7 +136,7 @@
         </defaults>
     </action>
 
-    <action id="tr.org.pardus.comar.listmodelapplications">
+    <action id="tr.lupus.comar.listmodelapplications">
         <description>List model applications</description>
         <description xml:lang="tr">Model uygulamaları listele</description>
         <description xml:lang="nl">Lijst van model applicaties</description>

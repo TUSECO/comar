@@ -1,12 +1,12 @@
 <comarModel>
     <interface name="Core">
-        <method name="register" action_id="tr.org.pardus.comar.register">
+        <method name="register" action_id="tr.lupus.comar.register">
             <arg name="model" type="s" direction="in"/>
             <arg name="package" type="s" direction="in"/>
             <arg name="script" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
-        <method name="remove" action_id="tr.org.pardus.comar.remove">
+        <method name="remove" action_id="tr.lupus.comar.remove">
             <arg name="package" type="s" direction="in"/>
             <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
         </method>
