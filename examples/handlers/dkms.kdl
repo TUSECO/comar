@@ -1,0 +1,12 @@
+packagehandler "dkms" {
+    description "DKMS module builder"
+    setup {
+        command "/usr/libexec/comar/handlers/dkms/setup.sh"
+    }
+    cleanup {
+        command "/usr/libexec/comar/handlers/dkms/cleanup.sh"
+    }
+    post-cleanup {
+        command "true"
+    }
+}

@@ -1,0 +1,11 @@
+packagehandler "ario" {
+    description "Ario icon cache updater"
+    setup {
+        command "/usr/bin/gtk3-update-icon-cache" "-f" "/usr/share/icons/hicolor"
+        match { starts-with "usr/share/icons/hicolor/" }
+    }
+    post-cleanup {
+        command "/usr/bin/gtk3-update-icon-cache" "-f" "/usr/share/icons/hicolor"
+        match { starts-with "usr/share/icons/hicolor/" }
+    }
+}

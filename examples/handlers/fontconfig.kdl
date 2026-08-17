@@ -1,0 +1,14 @@
+packagehandler "fontconfig" {
+    description "Font cache updater"
+    setup {
+        command "/usr/bin/fc-cache"
+        match { starts-with "usr/share/fonts/" }
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "/usr/bin/fc-cache"
+        match { starts-with "usr/share/fonts/" }
+    }
+}

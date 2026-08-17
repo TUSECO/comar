@@ -1,0 +1,16 @@
+packagehandler "baselayout" {
+    description "ld.so.cache updater"
+    setup {
+        command "/sbin/ldconfig" "-X"
+        match { starts-with "lib/" }
+        match { starts-with "usr/lib/" }
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "/sbin/ldconfig" "-X"
+        match { starts-with "lib/" }
+        match { starts-with "usr/lib/" }
+    }
+}

@@ -1,0 +1,17 @@
+packagehandler "python" {
+    description "Python byte-compilation handler"
+    setup {
+        command "/usr/bin/python3" "/usr/lib/python3.11/py_compile.py"
+        match { ends-with ".py" }
+        exclude { starts-with "usr/share/doc/" }
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "/bin/rm" "-f"
+        match { ends-with ".py" }
+        transform ".py" ".pyc"
+        transform ".py" ".pyo"
+    }
+}

@@ -1,0 +1,22 @@
+packagehandler "glib2" {
+    description "GLib schemas and GIO modules handler"
+    setup {
+        command "/usr/bin/gio-querymodules" "/usr/lib/gio/modules"
+        match { starts-with "usr/lib/gio/modules/" }
+    }
+    setup {
+        command "/usr/bin/glib-compile-schemas" "/usr/share/glib-2.0/schemas"
+        match { starts-with "usr/share/glib-2.0/schemas/" }
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "/usr/bin/gio-querymodules" "/usr/lib/gio/modules"
+        match { starts-with "usr/lib/gio/modules/" }
+    }
+    post-cleanup {
+        command "/usr/bin/glib-compile-schemas" "/usr/share/glib-2.0/schemas"
+        match { starts-with "usr/share/glib-2.0/schemas/" }
+    }
+}

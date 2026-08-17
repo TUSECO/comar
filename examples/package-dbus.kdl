@@ -1,0 +1,12 @@
+// dbus için System.Package KDL (package.py yerine)
+//
+// Orijinal: core/system/base/dbus/comar/package.py
+//   postInstall → kullanıcı/grup oluştur
+//   postRemove  → kullanıcı/grup sil
+
+package {
+    description "D-Bus system user/group manager"
+
+    post-install "groupadd -g 101 dbus 2>/dev/null; useradd -m -d /run/dbus -r -s /bin/false -u 101 -g 101 dbus -c \"dbus\" 2>/dev/null"
+    post-remove "userdel dbus 2>/dev/null; groupdel dbus 2>/dev/null"
+}

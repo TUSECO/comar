@@ -1,0 +1,12 @@
+packagehandler "shared-mime-info" {
+    description "MIME database updater"
+    setup {
+        command "/bin/sh" "-c" "grep -q '/share/mime/packages/.*\\.xml' \"$FILEPATH\" || exit 0; if [ -f /sys/block/$(findmnt -n -o SOURCE / | sed 's/[0-9]*$//' | sed 's/.*\\///')/queue/rotational ] && [ \"$(cat /sys/block/$(findmnt -n -o SOURCE / | sed 's/[0-9]*$//' | sed 's/.*\\///')/queue/rotational)\" = 0 ]; then PKGSYSTEM_ENABLE_FSYNC=0 /usr/bin/update-mime-database /usr/share/mime; else /usr/bin/update-mime-database /usr/share/mime; fi"
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "/bin/sh" "-c" "grep -q '/share/mime/packages/.*\\.xml' \"$FILEPATH\" || exit 0; if [ -f /sys/block/$(findmnt -n -o SOURCE / | sed 's/[0-9]*$//' | sed 's/.*\\///')/queue/rotational ] && [ \"$(cat /sys/block/$(findmnt -n -o SOURCE / | sed 's/[0-9]*$//' | sed 's/.*\\///')/queue/rotational)\" = 0 ]; then PKGSYSTEM_ENABLE_FSYNC=0 /usr/bin/update-mime-database /usr/share/mime; else /usr/bin/update-mime-database /usr/share/mime; fi"
+    }
+}

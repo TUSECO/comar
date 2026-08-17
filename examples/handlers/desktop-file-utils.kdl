@@ -1,0 +1,14 @@
+packagehandler "desktop-file-utils" {
+    description "Desktop database updater"
+    setup {
+        command "/usr/bin/update-desktop-database" "-q"
+        match { starts-with "usr/share/applications/" }
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "/usr/bin/update-desktop-database" "-q"
+        match { starts-with "usr/share/applications/" }
+    }
+}

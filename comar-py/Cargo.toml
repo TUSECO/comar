@@ -1,0 +1,24 @@
+[package]
+name        = "comar-py"
+description = "ÇOMAR Python bindings (PyO3)"
+version.workspace     = true
+edition.workspace     = true
+license.workspace     = true
+authors.workspace     = true
+repository.workspace  = true
+
+[lib]
+name    = "_comar"
+crate-type = ["cdylib"]
+path    = "src/lib.rs"
+
+[dependencies]
+comar-api = { path = "../comar-api" }
+pyo3.workspace      = true
+tokio.workspace     = true
+anyhow.workspace    = true
+thiserror.workspace = true
+zvariant.workspace  = true
+
+[build-dependencies]
+pyo3-build-config = "0.23"

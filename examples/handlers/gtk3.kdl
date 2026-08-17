@@ -1,0 +1,22 @@
+packagehandler "gtk3" {
+    description "GTK3 icon cache and immodules handler"
+    setup {
+        command "/usr/bin/gtk-update-icon-cache" "-f" "/usr/share/icons/hicolor"
+        match { starts-with "usr/share/icons/hicolor/" }
+    }
+    setup {
+        command "/usr/bin/gtk-query-immodules-3.0" "--update-cache"
+        match { starts-with "usr/lib/gtk-3.0/" }
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "/usr/bin/gtk-update-icon-cache" "-f" "/usr/share/icons/hicolor"
+        match { starts-with "usr/share/icons/hicolor/" }
+    }
+    post-cleanup {
+        command "/usr/bin/gtk-query-immodules-3.0" "--update-cache"
+        match { starts-with "usr/lib/gtk-3.0/" }
+    }
+}

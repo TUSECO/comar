@@ -1,0 +1,11 @@
+# ÇOMAR D-Bus servis aktivasyon dosyası.
+# Kurulum: /usr/share/dbus-1/system-services/tr.org.luppo.comar.service
+#
+# D-Bus, ÇOMAR'a bir mesaj geldiğinde bu dosyaya bakarak
+# servisi otomatik başlatır (socket/D-Bus aktivasyonu).
+# ÇOMAR idle_timeout sonunda kendiliğinden kapanır.
+
+[D-BUS Service]
+Name=tr.org.luppo.comar
+Exec=/usr/sbin/comar
+User=root

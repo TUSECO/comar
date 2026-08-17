@@ -1,0 +1,38 @@
+# main.rs
+error_root_required: "ÇOMAR sistem servisi root olarak çalıştırılmalıdır."
+error_dir_not_found: "Gerekli dizin bulunamadı: %{dir}"
+error_model_load_failed: "Modeller yüklenemedi: %{error}"
+error_python_init_failed: "Python VM başlatılamadı: %{error}"
+error_daemon_failed: "Daemon sonlandı: %{error}"
+error_log_init_failed: "Log sistemi başlatılamadı: %{error}"
+error_dir_generic: "Dizin hatası: %{error}"
+status_starting: "ÇOMAR %{version} başlatılıyor..."
+status_models_loaded: "Yüklenen model sayısı: %{count}"
+status_sigint: "SIGINT alındı, kapatılıyor..."
+status_pending_requests: "%{count} aktif istek tamamlanıyor..."
+status_python_ready: "Python VM hazır."
+status_shutdown: "ÇOMAR kapatıldı."
+
+# process.rs
+error_busy: "Sunucu meşgul (maksimum 500 eşzamanlı istek)"
+error_invalid_arg: "Geçersiz argüman: %{arg}"
+error_policykit_generic: "PolicyKit hatası"
+error_unknown_core_method: "Bilinmeyen Core metodu: %{method}"
+error_policykit: "PolicyKit yetkilendirmesi reddedildi: %{action}"
+error_dbus: "D-Bus iletişim hatası: %{error}"
+error_internal: "İç hata: %{error}"
+error_script: "Betik hatası: %{error}"
+error_max_concurrent: "Maksimum eşzamanlı istek sayısına ulaşıldı (500)"
+error_unknown_core_method_warn: "Bilinmeyen Core metodu: %{method}"
+error_messagestream: "MessageStream hatası: %{error}"
+status_idle_timeout: "Servis %{timeout}s boşta kaldı, kapatılıyor..."
+status_ready: "D-Bus bağlantısı hazır, mesajlar bekleniyor..."
+
+# declarative.rs / script.rs
+error_io: "I/O hatası: %{error}"
+error_xml: "XML ayrıştırma hatası: %{error}"
+error_missing_script: "Betik bulunamadı: %{path} (.py, .kdl, .json)"
+error_missing_method: "Metod '%{method}' betikte tanımlı değil: %{path}"
+
+# signal_bus.rs
+status_signals_ready: "Sinyal/çağrı döngüsü hazır."

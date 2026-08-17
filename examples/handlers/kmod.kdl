@@ -1,0 +1,14 @@
+packagehandler "kmod" {
+    description "Kernel module dependency updater"
+    setup {
+        command "/sbin/depmod" "-a"
+        match { starts-with "lib/modules/" }
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "/sbin/depmod" "-a"
+        match { starts-with "lib/modules/" }
+    }
+}

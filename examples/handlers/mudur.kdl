@@ -1,0 +1,14 @@
+packagehandler "mudur" {
+    description "Environment update handler"
+    setup {
+        command "/sbin/update-environment"
+        match { starts-with "etc/env.d" }
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "/sbin/update-environment"
+        match { starts-with "etc/env.d" }
+    }
+}

@@ -1,0 +1,31 @@
+// System.Package KDL şablonu
+// ==========================
+//
+// Bu dosya bir paketin kurulum/kaldırma işlemlerini tanımlar.
+// COMAR tarafından package.py yerine kullanılır.
+//
+// Desteklenen metodlar:
+//   post-install  — paket kurulduktan sonra çalışır
+//                  Argümanlar: $1=fromVersion, $2=fromRelease, $3=toVersion, $4=toRelease
+//   pre-remove    — paket kaldırılmadan önce çalışır (argümansız)
+//   post-remove   — paket kaldırıldıktan sonra çalışır (argümansız)
+//
+// Metod adları otomatik camelCase'e çevrilir:
+//   post-install → postInstall,  post-remove → postRemove
+
+package {
+    description "Package installation handler"
+
+    // ── Örnek 1: Kullanıcı/grup yönetimi (dbus paketi) ──────────────
+    // post-install "groupadd -g 101 dbus 2>/dev/null; useradd -m -d /run/dbus -r -s /bin/false -u 101 -g 101 dbus -c \"dbus\" 2>/dev/null"
+    // post-remove "userdel dbus 2>/dev/null; groupdel dbus 2>/dev/null"
+
+    // ── Örnek 2: Sistem komutları (glibc paketi) ────────────────────
+    // post-install "[ -x /usr/sbin/iconvconfig ] && iconvconfig --prefix=/; /sbin/init U &>/dev/null"
+
+    // ── Örnek 3: Dosya izinleri (pam paketi) ────────────────────────
+    // post-install "chmod 4755 /sbin/unix_chkpwd"
+
+    // ── Örnek 4: Koşullu işlem ──────────────────────────────────────
+    // post-install "if [ $1 != $3 ]; then echo 'Upgrade detected'; fi"
+}

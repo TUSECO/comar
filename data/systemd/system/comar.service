@@ -1,0 +1,28 @@
+# ÇOMAR systemd servis dosyası — opsiyonel daemon modu.
+# Kurulum: /usr/lib/systemd/system/comar.service
+#
+# Normal kullanımda D-Bus aktivasyonu tercih edilir (comar.service gerekmez).
+# Bu dosya: ÇOMAR'ı systemd servisi olarak sürekli çalıştırmak isteyenler için.
+
+[Unit]
+Description=ÇOMAR - COnfiguration MAnageR
+Documentation=https://github.com/Antolun/comar
+After=dbus.service
+Requires=dbus.service
+
+[Service]
+Type=dbus
+BusName=tr.org.luppo.comar
+ExecStart=/usr/sbin/comar --timeout 0
+User=root
+Restart=on-failure
+RestartSec=3s
+
+# Güvenlik kısıtlamaları
+ProtectSystem=full
+ProtectHome=read-only
+PrivateTmp=true
+NoNewPrivileges=false
+
+[Install]
+WantedBy=multi-user.target

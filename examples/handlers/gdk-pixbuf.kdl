@@ -1,0 +1,14 @@
+packagehandler "gdk-pixbuf" {
+    description "GDK pixbuf loader cache updater"
+    setup {
+        command "/usr/bin/gdk-pixbuf-query-loaders" "--update-cache"
+        match { starts-with "usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/" }
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "/usr/bin/gdk-pixbuf-query-loaders" "--update-cache"
+        match { starts-with "usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/" }
+    }
+}

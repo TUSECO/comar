@@ -1,0 +1,12 @@
+packagehandler "xorg-app" {
+    description "Xorg font directory updater"
+    setup {
+        command "/bin/sh" "-c" "grep -q '^usr/share/fonts/' \"$FILEPATH\" || exit 0; for dir in $(find /usr/share/fonts -type d ! -path '*/encodings/*'); do rm -f \"$dir/fonts.scale\" \"$dir/fonts.dir\"; mkfontscale -u \"$dir\"; mkfontdir \"$dir\"; done"
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "/bin/sh" "-c" "grep -q '^usr/share/fonts/' \"$FILEPATH\" || exit 0; for dir in $(find /usr/share/fonts -type d ! -path '*/encodings/*'); do rm -f \"$dir/fonts.scale\" \"$dir/fonts.dir\"; mkfontscale -u \"$dir\"; mkfontdir \"$dir\"; done"
+    }
+}

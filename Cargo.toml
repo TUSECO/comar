@@ -1,0 +1,52 @@
+[workspace]
+members = [
+    "comar-daemon",
+    "comar-api",
+    "comar-py",
+]
+resolver = "2"
+
+[workspace.package]
+version     = "4.0.0"
+edition     = "2021"
+license     = "MIT"
+authors     = ["Solzic0 <solzic0@yandex.com>"]
+repository  = "https://github.com/Antolun/comar"
+
+[workspace.dependencies]
+# Async runtime
+tokio       = { version = "1", features = ["full"] }
+
+# D-Bus
+zbus        = { version = "4", default-features = false, features = ["tokio"] }
+zvariant    = { version = "4" }
+
+# Python embedding
+pyo3 = { version = "0.23", features = ["auto-initialize"] }
+
+# XML parsing
+quick-xml   = { version = "0.36", features = ["serialize"] }
+
+# Error handling
+anyhow      = "1"
+thiserror   = "2"
+
+# Logging
+tracing             = "0.1"
+tracing-subscriber  = { version = "0.3", features = ["env-filter", "fmt"] }
+
+# CLI
+clap        = { version = "4", features = ["derive"] }
+
+# Serialization
+serde       = { version = "1", features = ["derive"] }
+serde_json  = "1"
+toml        = "0.8"
+kdl         = "6"
+
+# Unix utilities
+nix         = { version = "0.29", features = ["process", "user", "signal", "fs"] }
+
+# Testing
+mockall     = "0.13"
+tokio-test  = "0.4"

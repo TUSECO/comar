@@ -1,0 +1,14 @@
+packagehandler "gconf" {
+    description "GConf schema installer"
+    setup {
+        command "/usr/bin/gconftool-2" "--makefile-install-rule"
+        match { starts-with "etc/gconf/schemas/" }
+    }
+    cleanup {
+        command "/usr/bin/gconftool-2" "--makefile-uninstall-rule"
+        match { starts-with "etc/gconf/schemas/" }
+    }
+    post-cleanup {
+        command "true"
+    }
+}

@@ -1,0 +1,9 @@
+packagehandler "emacs" {
+    description "Emacs byte-compilation handler"
+    setup {
+        command "/bin/sh" "-c" "grep -oP '<Path>[^<]+\\.el</Path>' \"$FILEPATH\" | sed 's/<[^>]*>//g' | while read -r f; do [ -f \"/${f}c\" ] || /usr/bin/emacs --no-init-file --no-site-file --multibyte -batch -f batch-byte-compile \"/$f\"; done"
+    }
+    cleanup {
+        command "/bin/sh" "-c" "grep -oP '<Path>[^<]+\\.el</Path>' \"$FILEPATH\" | sed 's/<[^>]*>//g' | while read -r f; do rm -f \"/${f}c\"; done"
+    }
+}

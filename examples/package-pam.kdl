@@ -1,0 +1,10 @@
+// pam için System.Package KDL (postInstall.py yerine)
+//
+// Orijinal: core/system/base/pam/comar/postInstall.py
+//   postInstall → chmod unix_chkpwd
+
+package {
+    description "PAM permission fixer"
+
+    post-install "chmod 4755 /sbin/unix_chkpwd"
+}

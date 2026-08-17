@@ -1,0 +1,75 @@
+// System.Service KDL şablonu
+// ==========================
+//
+// Bu dosya bir sistem hizmetini tanımlar.
+// COMAR tarafından service.py yerine kullanılır.
+//
+// Desteklenen alanlar:
+//   type        — "local", "system", "virtual" (varsayılan: "script")
+//   description — Tek dilli: description "metin"
+//                 Çok dilli: description { en "text"; tr "metin" }
+//   conf        — Yüklenecek config dosyası (örn: "networkmanager" → /etc/conf.d/networkmanager)
+//   default     — Varsayılan durum: "on", "off", "conditional" (opsiyonel)
+//
+// Desteklenen metodlar (herhangi bir ad kullanılabilir):
+//   start, stop, status, reload, ready, setState, vs.
+//   donotify=true eklendiğinde D-Bus sinyali gönderilir.
+
+service {
+    type "local"
+    description {
+        en "Network Manager"
+        tr "Ağ Yöneticisi Hizmeti"
+    }
+    default "conditional"
+    conf "networkmanager"
+
+    // ── Temel metodlar ──────────────────────────────────────────────
+
+    // startService karşılığı: komutu doğrudan çalıştır
+    start "/usr/sbin/NetworkManager --pid-file=/run/NetworkManager/NetworkManager.pid" donotify=true
+
+    // stopService karşılığı: PID dosyasından kill
+    stop "kill $(cat /run/NetworkManager/NetworkManager.pid 2>/dev/null) 2>/dev/null" donotify=true
+
+    // status karşılığı: isServiceRunning
+    status "kill -0 $(cat /run/NetworkManager/NetworkManager.pid 2>/dev/null) 2>/dev/null"
+
+    // ── İsteğe bağlı metodlar ───────────────────────────────────────
+
+    // reload: SIGHUP gönder
+    reload "kill -HUP $(cat /run/NetworkManager/NetworkManager.pid 2>/dev/null) 2>/dev/null" donotify=true
+
+    // ready: Boot sırasında koşullu başlatma
+    ready "if [ \"$SERVICE_DEFAULT\" = \"conditional\" ]; then /usr/sbin/NetworkManager --pid-file=/run/NetworkManager/NetworkManager.pid; fi"
+
+    // setState: Servisi etkinleştir/devre dışı bırak
+    // (argüman: $1 = "on"/"off"/"conditional")
+    // set-state "rc-update $1 NetworkManager"
+}
+
+// ── Yaygın kalıplar ──────────────────────────────────────────────────
+//
+// Basit servis (PID dosyasız):
+//   service {
+//       type "local"
+//       description "Simple Service"
+//       start "/usr/sbin/simplesvc"
+//       stop "killall simplesvc"
+//       status "pidof simplesvc"
+//   }
+//
+// Config dosyalı servis:
+//   service {
+//       type "local"
+//       description "My Service"
+//       conf "myservice"
+//       start "/usr/sbin/myservice --pid-file=/run/myservice.pid $OPTS"
+//       stop "kill $(cat /run/myservice.pid)"
+//       status "kill -0 $(cat /run/myservice.pid)"
+//   }
+//
+// Tek satırlık işlem (package.py/service.py yerine):
+//   package {
+//       post-install "chmod 4755 /sbin/unix_chkpwd"
+//   }

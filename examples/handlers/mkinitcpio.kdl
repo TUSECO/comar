@@ -1,0 +1,12 @@
+packagehandler "mkinitcpio" {
+    description "Initramfs generator (mkinitcpio)"
+    setup {
+        command "/bin/sh" "-c" "grep -oP '<Path>lib/modules/[^/]+' \"$FILEPATH\" | sed 's|lib/modules/||' | sort -u | while read -r kver; do /usr/bin/mkinitcpio -k \"$kver\" -g \"/boot/initramfs-${kver}-fallback.img\" -S autodetect; /usr/bin/mkinitcpio -k \"$kver\" -c /etc/mkinitcpio.conf -g \"/boot/initramfs-${kver}.img\"; done"
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "true"
+    }
+}

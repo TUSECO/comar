@@ -1,0 +1,12 @@
+packagehandler "mkinitramfs" {
+    description "Initramfs generator (mkinitramfs)"
+    setup {
+        command "/bin/sh" "-c" "grep -qE '<Path>(lib/initramfs|boot/kernel|bin/busybox)' \"$FILEPATH\" || exit 0; for kv in /etc/kernel/*; do /sbin/mkinitramfs --type $(basename \"$kv\"); done"
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "true"
+    }
+}

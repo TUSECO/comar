@@ -1,0 +1,38 @@
+# main.rs
+error_root_required: "ÇOMAR system service must be run as root."
+error_dir_not_found: "Required directory not found: %{dir}"
+error_model_load_failed: "Failed to load models: %{error}"
+error_python_init_failed: "Failed to initialize Python VM: %{error}"
+error_daemon_failed: "Daemon terminated: %{error}"
+error_log_init_failed: "Failed to initialize log system: %{error}"
+error_dir_generic: "Directory error: %{error}"
+status_starting: "Starting ÇOMAR %{version}..."
+status_models_loaded: "Number of models loaded: %{count}"
+status_sigint: "SIGINT received, shutting down..."
+status_pending_requests: "Waiting for %{count} active requests to complete..."
+status_python_ready: "Python VM ready."
+status_shutdown: "ÇOMAR closed."
+
+# process.rs
+error_busy: "Server is busy (max 500 concurrent requests)"
+error_invalid_arg: "Invalid argument: %{arg}"
+error_policykit_generic: "PolicyKit error"
+error_unknown_core_method: "Unknown Core method: %{method}"
+error_policykit: "PolicyKit authorization denied: %{action}"
+error_dbus: "D-Bus communication error: %{error}"
+error_internal: "Internal error: %{error}"
+error_script: "Script error: %{error}"
+error_max_concurrent: "Maximum concurrent requests reached (500)"
+error_unknown_core_method_warn: "Unknown Core method: %{method}"
+error_messagestream: "MessageStream error: %{error}"
+status_idle_timeout: "Service idle for %{timeout}s, shutting down..."
+status_ready: "D-Bus connection ready, waiting for messages..."
+
+# declarative.rs / script.rs
+error_io: "I/O error: %{error}"
+error_xml: "XML parsing error: %{error}"
+error_missing_script: "Script not found: %{path} (.py, .kdl, .json)"
+error_missing_method: "Method '%{method}' not defined in script: %{path}"
+
+# signal_bus.rs
+status_signals_ready: "Signal/call loop ready."

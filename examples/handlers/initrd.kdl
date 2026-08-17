@@ -1,0 +1,12 @@
+packagehandler "initrd" {
+    description "Initramfs generator (update-initrd)"
+    setup {
+        command "/bin/sh" "-c" "grep -oP '<Path>lib/modules/[^/]+' \"$FILEPATH\" | sort -u | while read -r p; do kver=$(echo \"$p\" | sed 's|lib/modules/||'); update-initrd KERNELVER=\"$kver\" MODDIR=\"/lib/modules/$kver\" OUTPUT=\"/boot/initramfs-$kver\"; [ -x /usr/bin/update-grub ] && /usr/bin/update-grub; done"
+    }
+    cleanup {
+        command "true"
+    }
+    post-cleanup {
+        command "true"
+    }
+}

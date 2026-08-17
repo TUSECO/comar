@@ -1,0 +1,10 @@
+// glibc için System.Package KDL (package.py yerine)
+//
+// Orijinal: core/system/base/glibc/comar/package.py
+//   postInstall → iconvconfig + init reload
+
+package {
+    description "glibc iconv cache generator"
+
+    post-install "[ -x /usr/sbin/iconvconfig ] && iconvconfig --prefix=/; /sbin/init U &>/dev/null"
+}

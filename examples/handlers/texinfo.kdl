@@ -1,0 +1,26 @@
+packagehandler "texinfo" {
+    description "Texinfo info page registry"
+    setup {
+        command "/usr/bin/install-info"
+        match { starts-with "usr/share/info/" }
+        match { ends-with ".info" }
+    }
+    setup {
+        command "/usr/bin/install-info"
+        match { starts-with "usr/share/info/" }
+        match { ends-with ".info.gz" }
+    }
+    cleanup {
+        command "/usr/bin/install-info" "--delete"
+        match { starts-with "usr/share/info/" }
+        match { ends-with ".info" }
+    }
+    cleanup {
+        command "/usr/bin/install-info" "--delete"
+        match { starts-with "usr/share/info/" }
+        match { ends-with ".info.gz" }
+    }
+    post-cleanup {
+        command "true"
+    }
+}

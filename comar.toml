@@ -1,0 +1,63 @@
+[source]
+name = "comar-rs"
+homepage = "https://github.com/Antolun/comar"
+summary = "LupuS configuration manager (Rust implementation)"
+description = "COMAR (COnfiguration MAnageR) handles system configuration on LupuS. It manages D-Bus-activated configuration scripts with PolicyKit integration. This is the complete Rust rewrite of the original C/Python comar."
+license = ["GPLv3"]
+isa = ["app:console"]
+icon = "comar"
+partof = "system.base"
+
+[source.packager]
+name = "solzic0"
+email = "solzic0@yandex.com"
+
+[source.build-dependencies]
+dependency = [
+    { name = "rust", version = ">=1.70.0" },
+    { name = "python3", version = ">=3.11" },
+    { name = "python3-devel", version = ">=3.11" },
+    { name = "dbus-devel" },
+    { name = "glibc-devel" },
+    { name = "polkit-devel" },
+]
+
+[[package]]
+name = "comar"
+
+[package.actions]
+steps = [
+    #configure
+    
+    # build
+    "make",
+    # install
+    "make DESTDIR={install_root} PREFIX=/usr install",
+]
+
+[package.runtime-dependencies]
+dependency = [
+    { name = "python3", version = ">=3.11" },
+    { name = "dbus" },
+    { name = "polkit" },
+    { name = "glibc" },
+]
+
+[package.files]
+path = [
+    { path = "/sbin/comar", fileType = "executable" },
+    { path = "/usr/share/dbus-1/system.d", fileType = "config" },
+    { path = "/usr/share/dbus-1/system-services", fileType = "data" },
+    { path = "/usr/share/polkit-1/actions", fileType = "data" },
+    { path = "/usr/lib/systemd/system/comar.service", fileType = "data" },
+    { path = "/usr/lib/python3.13/site-packages/comar", fileType = "library" },
+    { path = "/var/db/comar3", fileType = "data" },
+    { path = "/var/log/comar3", fileType = "data" },
+]
+
+[History]
+updates = [
+    { release = 2, date = "2026-06-23", version = "4.0.1", comment = "PiSi to Luppo.", name = "Solzic0", email = "solzic0@yandex.com" },
+    { release = 1, date = "2026-06-23", version = "4.0.0", comment = "Initial release of comar-rs (Rust port).", name = "PisiLinux Community", email = "admins@pisilinux.org" },
+]
+
