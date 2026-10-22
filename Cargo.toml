@@ -10,8 +10,8 @@ resolver = "2"
 version     = "4.0.0"
 edition     = "2021"
 license     = "MIT"
-authors     = ["Solzic0 <solzic0@yandex.com>"]
-repository  = "https://github.com/Antolun/comar"
+authors     = ["Kurtürk <kurturkish@yandex.com>"]
+repository  = "https://github.com/TUSECO/comar"
 
 [workspace.dependencies]
 # Async runtime

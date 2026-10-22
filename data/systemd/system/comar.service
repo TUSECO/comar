@@ -6,7 +6,7 @@
 
 [Unit]
 Description=ÇOMAR - COnfiguration MAnageR
-Documentation=https://github.com/Antolun/comar
+Documentation=https://github.com/TUSECO/comar
 After=dbus.service
 Requires=dbus.service
 

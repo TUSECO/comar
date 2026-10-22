@@ -1,6 +1,6 @@
 [source]
 name = "comar-rs"
-homepage = "https://github.com/Antolun/comar"
+homepage = "https://github.com/TUSECO/comar"
 summary = "LupuS configuration manager (Rust implementation)"
 description = "COMAR (COnfiguration MAnageR) handles system configuration on LupuS. It manages D-Bus-activated configuration scripts with PolicyKit integration. This is the complete Rust rewrite of the original C/Python comar."
 license = ["GPLv3"]
@@ -9,8 +9,8 @@ icon = "comar"
 partof = "system.base"
 
 [source.packager]
-name = "solzic0"
-email = "solzic0@yandex.com"
+name = "kurturkish"
+email = "kurturkish@yandex.com"
 
 [source.build-dependencies]
 dependency = [
@@ -57,7 +57,7 @@ path = [
 
 [History]
 updates = [
-    { release = 2, date = "2026-06-23", version = "4.0.1", comment = "PiSi to Luppo.", name = "Solzic0", email = "solzic0@yandex.com" },
+    { release = 2, date = "2026-06-23", version = "4.0.1", comment = "PiSi to Luppo.", name = "Kurtürk", email = "kurturkish@yandex.com" },
     { release = 1, date = "2026-06-23", version = "4.0.0", comment = "Initial release of comar-rs (Rust port).", name = "PisiLinux Community", email = "admins@pisilinux.org" },
 ]
 

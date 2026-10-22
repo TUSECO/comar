@@ -3,7 +3,7 @@
 
 <policyconfig>
     <vendor>Luppo</vendor>
-    <vendor_url>https://www.antolun.com</vendor_url>
+    <vendor_url>https://www.tuseco.com</vendor_url>
     <icon_name>computer</icon_name>
 
     <action id="tr.org.luppo.comar.boot.modules.setoptions">
